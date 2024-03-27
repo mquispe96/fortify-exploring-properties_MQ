@@ -1,0 +1,200 @@
+body, html {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(5, auto);
+  gap: 50px;
+}
+
+.ex1 {
+  background: white;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: bolder;
+  height: 80px;
+}
+
+.ex2 {
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bolder;
+  height: 80px;
+}
+
+.ex3 {
+  border: none;
+  background: rgb(36, 100, 236);
+  color: white;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 300;
+  height: 60px;
+}
+
+.ex4 {
+  border: none;
+  background: rgb(36, 100, 236);
+  color: white;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bolder;
+  height: 80px;
+}
+
+.ex5 {
+  border: none;
+  background: white;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bolder;
+  height: 70px;
+  box-shadow: 0 2px 5px 2px lightgrey;
+}
+
+.ex6 {
+  border: none;
+  background: linear-gradient(140deg, rgb(180, 83, 230), rgb(227, 74, 166));
+  color: white;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bolder;
+  height: 80px;
+}
+
+.ex7 {
+  border: none;
+  background: linear-gradient(140deg, rgb(255, 133, 27), rgb(253, 15, 190));
+  color: white;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bolder;
+  height: 80px;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+.ex7:hover {
+  background: linear-gradient(140deg, rgb(253, 15, 190), rgb(255, 133, 27));
+}
+.ex7:hover::before {
+  background: transparent;
+}
+.ex7::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 94%;
+  height: 88%;
+  background: rgb(16, 24, 38);
+  border-radius: 10px;
+  top: 6%;
+  left: 3%;
+  transition: all 0.3s ease;
+}
+
+.ex8 {
+  border: 3px rgb(79, 69, 228) solid;
+  background: white;
+  color: white;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: bolder;
+  height: 80px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.ex8:hover {
+  color: rgb(79, 69, 228);
+}
+.ex8:hover span {
+  right: -20%;
+}
+.ex8:hover::before {
+  height: 0;
+  top: 50%;
+}
+.ex8::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: rgb(79, 69, 228);
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
+}
+.ex8 span {
+  transition: all 0.3s ease;
+  position: absolute;
+  right: 6%;
+}
+
+.ex9 {
+  border: 5px black solid;
+  background: white;
+  color: black;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bolder;
+  height: 80px;
+  box-shadow: 5px 5px 0 5px black;
+  transition: all 0.3s ease;
+}
+.ex9:hover {
+  background: black;
+  color: white;
+  box-shadow: none;
+}
+
+.ex10 {
+  border: none;
+  background: white;
+  color: rgb(148, 51, 233);
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bolder;
+  height: 80px;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+.ex10:hover {
+  color: white;
+  background: rgb(148, 51, 233);
+}
+.ex10:hover::before {
+  top: 0;
+  left: 0;
+}
+.ex10::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: rgb(148, 51, 233);
+  top: 5%;
+  left: 5%;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/*# sourceMappingURL=index.css.map */

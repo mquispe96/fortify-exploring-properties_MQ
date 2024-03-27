@@ -13,4 +13,11 @@ html, body {
   justify-items: center;
 }
 
+.button {
+  border: 3px black solid;
+  width: 200px;
+  height: 60px;
+  border-radius: 50px;
+}
+
 /*# sourceMappingURL=styles.css.map */
