@@ -10,8 +10,8 @@ body, html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 600px;
-  height: 600px;
+  width: 800px;
+  height: 800px;
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(5, auto);
@@ -24,6 +24,7 @@ body, html {
   font-size: 20px;
   font-weight: bolder;
   height: 80px;
+  border: 3px black solid;
 }
 
 .ex2 {
@@ -124,7 +125,8 @@ body, html {
   color: rgb(79, 69, 228);
 }
 .ex8:hover span {
-  right: -20%;
+  color: rgb(79, 69, 228);
+  right: 3%;
 }
 .ex8:hover::before {
   height: 0;
@@ -142,26 +144,67 @@ body, html {
   transition: all 0.3s ease;
 }
 .ex8 span {
+  color: white;
   transition: all 0.3s ease;
   position: absolute;
-  right: 6%;
+  right: -20%;
 }
 
 .ex9 {
-  border: 5px black solid;
+  border: 3px rgb(15, 24, 39) solid;
   background: white;
-  color: black;
+  color: rgb(15, 24, 39);
   border-radius: 10px;
   font-size: 20px;
   font-weight: bolder;
   height: 80px;
-  box-shadow: 5px 5px 0 5px black;
   transition: all 0.3s ease;
+  position: relative;
 }
 .ex9:hover {
-  background: black;
   color: white;
-  box-shadow: none;
+}
+.ex9:hover::before {
+  top: 0;
+  left: 0;
+}
+.ex9::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: rgb(15, 24, 39);
+  top: 10%;
+  left: 5%;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.ex9 p {
+  box-sizing: border-box;
+  width: 110%;
+  height: 105%;
+  border-radius: 8px;
+  margin: -1px -7px;
+  align-content: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.ex9 p:hover::before {
+  transform: rotate(-90deg);
+  top: -100%;
+}
+.ex9 p::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 300%;
+  height: 300%;
+  background: rgb(15, 24, 39);
+  top: 100%;
+  left: -100%;
+  transition: all 0.5s ease;
 }
 
 .ex10 {
@@ -173,12 +216,12 @@ body, html {
   font-weight: bolder;
   height: 80px;
   position: relative;
-  z-index: 1;
   transition: all 0.3s ease;
+  box-shadow: inset -0.5px -0.5px 2px 0.5px lightgray;
 }
 .ex10:hover {
   color: white;
-  background: rgb(148, 51, 233);
+  background: transparent;
 }
 .ex10:hover::before {
   top: 0;
@@ -191,10 +234,160 @@ body, html {
   width: 100%;
   height: 100%;
   background: rgb(148, 51, 233);
-  top: 5%;
+  top: 10%;
   left: 5%;
   border-radius: 10px;
   transition: all 0.3s ease;
+}
+
+.ex11 {
+  border: 8px black solid;
+  background: transparent;
+  color: black;
+  font-size: 20px;
+  font-weight: bolder;
+  height: 90px;
+  position: relative;
+}
+.ex11:hover::before {
+  top: 0;
+  left: 0;
+}
+.ex11::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 105%;
+  height: 110%;
+  background: rgb(252, 166, 165);
+  top: -25%;
+  left: -10%;
+  transition: all 0.3s ease;
+}
+
+.ex12 {
+  height: 80px;
+  background: #333;
+  border: 1px #404c5d solid;
+  font-size: 20px;
+  font-weight: bolder;
+  color: rgb(161, 161, 161);
+  border-radius: 5px;
+  box-shadow: -1px -5px 15px #41465b, 5px 5px 15px #41465b, inset 5px 5px 10px #212121, inset -5px -5px 10px #212121;
+  transition: 500ms;
+}
+.ex12:hover {
+  box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78;
+  color: #d6d6d6;
+  transition: 500ms;
+}
+.ex12:active {
+  box-shadow: 1px 1px 13px #20232e, -1px -1px 33px #545b78;
+  color: #d6d6d6;
+  transition: 100ms;
+}
+
+.ex13 {
+  height: 80px;
+  position: relative;
+  overflow: hidden;
+  border: 2px #560bad solid;
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 20px;
+  border-radius: 6px;
+  font-weight: bolder;
+  color: #560bad;
+}
+.ex13:hover {
+  color: #fff;
+}
+.ex13:hover:before {
+  top: -60px;
+  left: -60px;
+}
+.ex13:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: #560bad;
+  height: 350px;
+  width: 400px;
+  border-radius: 50%;
+  top: 100%;
+  left: 100%;
+  transition: all 0.7s;
+}
+.ex13:active:before {
+  background: #3a0ca3;
+  transition: background 0s;
+}
+
+.ex14 {
+  position: relative;
+  height: 80px;
+  font-size: 20px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  display: inline-block;
+  border-radius: 60px;
+  transition: all 0.2s;
+  border: none;
+  color: black;
+  background: whitesmoke;
+}
+.ex14:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+.ex14:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+.ex14:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.ex14::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+  background-color: #fff;
+}
+
+.ex15 {
+  border: none;
+  color: #fff;
+  background-image: linear-gradient(30deg, #0400ff, #4ce3f7);
+  border-radius: 20px;
+  background-size: 100% auto;
+  font-size: 20px;
+  font-weight: bolder;
+  height: 80px;
+}
+.ex15:hover {
+  background-position: right center;
+  background-size: 200% auto;
+  animation: pulse512 1.5s infinite;
+}
+
+@keyframes pulse512 {
+  0% {
+    box-shadow: 0 0 0 0 rgba(5, 186, 218, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(218, 103, 68, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(218, 103, 68, 0);
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
